@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: brown;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: #081b31;
+      color: #fff;
+      height: 5rem;
+      line-height: 5rem;
+      margin: 0;
+    }
+
+    img {
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.2s;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    .choice {
+      height: 165px;
+      width: 165px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .choices {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .score-board {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    .score {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-container {
+      margin-top: 20px;
+      padding: 20px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+
+  <div class="choices">
+    <div class="choice" id="stone">
+      <img src="stone.jpg" width="150" height="150" alt="Stone" />
+    </div>
+    <div class="choice" id="paper">
+      <img src="paper.jpg" width="150" height="150" alt="Paper" />
+    </div>
+    <div class="choice" id="scissor">
+      <img src="scissor.jpg" width="150" height="150" alt="Scissors" />
+    </div>
+  </div>
+
+  <div class="score-board">
+    <div class="score" id="player-score">
+      <h2>Player</h2>
+      <p id="player-score-value">0</p>
+    </div>
+    <div class="score" id="computer-score">
+      <h2>Computer</h2>
+      <p id="computer-score-value">0</p>
+    </div>
+  </div>
+
+  <div class="message-container">
+    <p id="msg">Play your move</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
