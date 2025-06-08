@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Result System</title>
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: sans-serif;
+    background: linear-gradient(rgba(240,240,240,0.95), rgba(240,240,240,0.95)),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px #ccc;
+  }
+
+  input, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  #output {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Result Form</h1>
+    <form id="resultForm">
+      <input type="text" id="name" placeholder="Student Name" required />
+      <input type="text" id="roll" placeholder="Roll Number" required />
+      <input type="number" id="math" placeholder="Math Marks" required />
+      <input type="number" id="science" placeholder="Science Marks" required />
+      <input type="number" id="english" placeholder="English Marks" required />
+      <button type="submit">Generate Result</button>
+    </form>
+    <div id="output"></div>
+  </div>
+  <script src="result.js"></script>
+</body>
+</html>
